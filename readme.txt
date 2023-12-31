@@ -1,4 +1,4 @@
-Why is a video on a web page ( e.g. Youtube ) resized ?
+Why is <video> on a web page ( e.g. Youtube ) resized ?
 
 <video> has a container ( like width=100% ) & by default it's video{object-fit:contain} of the user agent stylesheet of Edge , Chrome , Firefox .
 If no width , no height the default is width:auto & height:auto . 
@@ -7,7 +7,7 @@ If no video|img{object-fit: ... } , the default is video|img{object-fit:fill} .
 The web page author can obviously override the user agent stylesheet , e.g. on Youtube there's html5-main-video from class from <video> that points to a CSS rule containing object-fit:cover .
 
 
-How to let/get a video ( e.g. Youtube ) at its native resolution , not resized ?
+How to let/get <video> ( e.g. Youtube ) at its native resolution , not resized ?
 
 On web browser :
 3 ways : <video> without container , or with the container using max-width:100% &/or max-height:100% , otherwise to object-fit:none <video> .
