@@ -81,6 +81,9 @@ https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/device-
 https://developer.chrome.com/docs/extensions/mv3/manifest/
 https://developer.chrome.com/docs/extensions/mv3/manifest/content_scripts/
 
+Download the extension :
+https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjebez1%2FHow_to_watch_web_page_video_at_its_native_resolution_not_resized%2Ftree%2Fmain%2Fextension%2520video%2520no-fit
+
 How to install the extension :
 https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading
 
