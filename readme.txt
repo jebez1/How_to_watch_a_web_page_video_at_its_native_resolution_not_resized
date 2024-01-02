@@ -35,7 +35,7 @@ On Firefox :
 follow https://www.thoughtco.com/user-style-sheet-3469931 , in userContent.css put video{object-fit:none!important} .
 
 On Edge , Chrome :
-it impossible without extension : https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update .
+it's impossible without extension : https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update .
 But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : extension video no-fit ) .
 
 It works on Youtube , Facebook , Vimeo , Koreus , Twitter , Dailymotion ...
