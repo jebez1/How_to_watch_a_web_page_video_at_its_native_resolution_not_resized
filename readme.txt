@@ -38,14 +38,6 @@ On Edge , Chrome :
 it impossible without extension : https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update .
 But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : extension video no-fit ) .
 
-extension video no-fit source code :
-
-manifest.json :
-{"manifest_version":3,"name":"video no-fit","version":"1","content_scripts":[{"css":["!.css"],"matches":["<all_urls>"],"all_frames":true}]}
-
-!.css :
-video{object-fit:none!important}
-
 It works on Youtube , Facebook , Vimeo , Koreus , Twitter , Dailymotion ...
 
 # Locally , add object-fit:none to style from <video> with an extension ...
