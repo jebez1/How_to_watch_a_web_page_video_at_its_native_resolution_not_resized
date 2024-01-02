@@ -1,0 +1,1 @@
+{"manifest_version":3,"name":"video no-fit","version":"1","content_scripts":[{"css":["!.css"],"matches":["<all_urls>"],"all_frames":true}]}
