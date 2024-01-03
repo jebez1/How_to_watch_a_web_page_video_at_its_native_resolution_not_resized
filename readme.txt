@@ -36,13 +36,13 @@ follow https://www.thoughtco.com/user-style-sheet-3469931 , in userContent.css p
 
 On Edge , Chrome :
 it's impossible without extension : https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update .
-But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : extension video no-fit ) .
+But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : video no-fit ) .
 
 It works on Youtube , Facebook , Vimeo , Koreus , Twitter , Dailymotion ...
 
 # Locally , add object-fit:none to style from <video> with an extension ...
 
-#0 Modify the web browser source code to change the default video|img{object-fit:fill} to video|img{object-fit:none} .
+#0 Modify the web browser source code to change the default video|img{object-fit:fill} to video|img{object-fit:none!important} .
 
 
 How to auto get the video without container ?
@@ -81,10 +81,10 @@ https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/device-
 https://developer.chrome.com/docs/extensions/mv3/manifest/
 https://developer.chrome.com/docs/extensions/mv3/manifest/content_scripts/
 
-Download the extension :
-https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjebez1%2FHow_to_watch_web_page_video_at_its_native_resolution_not_resized%2Ftree%2Fmain%2Fextension%2520video%2520no-fit
+Download video no-fit :
+https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjebez1%2FHow_to_watch_web_page_video_at_its_native_resolution_not_resized%2Ftree%2Fmain%2Fvideo%2520no-fit
 
-How to install the extension :
+How to install an extension :
 https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading
 
-Feel free to publish extension video no-fit .
+Feel free to publish video no-fit .
