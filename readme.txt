@@ -66,7 +66,7 @@ It works on Youtube , Facebook , Vimeo , Koreus , Twitter , Dailymotion ...
 
 # Locally , add object-fit:none to style from <video> with an extension ...
 
-#0 Modify the web browser source code to change the default video|img{object-fit:fill} to video|img{object-fit:none!important} .
+## Modify the web browser source code to change the default video|img{object-fit:fill} to video|img{object-fit:none!important} .
 
 
 How to auto get the video without container ?
