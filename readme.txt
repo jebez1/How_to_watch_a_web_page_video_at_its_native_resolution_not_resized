@@ -41,9 +41,11 @@ In Command Prompt :
 python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak"
 
 Nota :
+
 The new resources.pak isn't brotli compressed as the original (
 python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak" --brotli "C:\Program Files\brotli.exe"
 doesn't work ) , I wonder the way to do that ...
+
 This method doesn't work for Edge (
 python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak_e\
 'brotli' is not recognized as an internal or external command,
@@ -52,6 +54,8 @@ Command '['brotli', '--decompress', '--stdout']' returned non-zero exit status 1
 python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak\ --brotli "C:\Program Files\brotli.exe"
 corrupt input [con]
 Command '['C:\\Program Files\\brotli.exe', '--decompress', '--stdout']' returned non-zero exit status 1. ) .
+
+There's also https://github.com/myfreeer/chrome-pak-customizer but as the time I write ; the last version 2.0 doesn't work ...
 
 User stylesheet :
 
