@@ -47,7 +47,7 @@ python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Appl
 pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe ) , I wonder the way to do that ...
 
 This method doesn't work for Edge (
-python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak_e\
+python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak\
 'brotli' is not recognized as an internal or external command,
 operable program or batch file.
 Command '['brotli', '--decompress', '--stdout']' returned non-zero exit status 1.
