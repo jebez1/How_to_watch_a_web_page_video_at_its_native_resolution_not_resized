@@ -44,7 +44,7 @@ Nota :
 
 The new resources.pak isn't brotli compressed as the original (
 python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak" --brotli "C:\Program Files\brotli.exe"
-pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe ) , I wonder the way to do that ...
+pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe ) , I wonder how to do that ...
 
 This method doesn't work for Edge (
 python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak\
