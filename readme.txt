@@ -55,7 +55,7 @@ python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Applic
 corrupt input [con]
 Command '['C:\\Program Files\\brotli.exe', '--decompress', '--stdout']' returned non-zero exit status 1. ) .
 
-There's also https://github.com/myfreeer/chrome-pak-customizer but at the time I write ; the last version 2.0 doesn't work ...
+There's also https://github.com/myfreeer/chrome-pak-customizer but at the time I write ; the last release 2.0 & the 3.x branch ( to compile ) don't work ...
 
 User stylesheet :
 
