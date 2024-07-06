@@ -27,7 +27,7 @@ Generally , by video{object-fit:none!important} , overriding all other web page 
 User agent stylesheet :
 
 On Firefox :
-with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(formerly_omni.jar) , in chrome\toolkit\res\html.css of C:\Program Files\Mozilla Firefox\omni.ja : edit video{object-fit:contain} to video{object-fit:none} .
+with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(formerly_omni.jar) , in chrome\toolkit\res\html.css of C:\Program Files\Mozilla Firefox\omni.ja : edit video{object-fit:contain} to video{object-fit:none!important} .
 
 On Chrome :
 Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0/brotli-x64-windows-static.zip ) then put brotli.exe in e.g. C:\Program Files\ .
@@ -36,7 +36,7 @@ git clone https://chromium.googlesource.com/chromium/src/tools/grit
 ( assuming the grit folder is in e.g. D:\ , the 120.0.6099.225 folder will probably change ( Chrome update ) , assuming extracting in e.g. D:\pak\ )
 python D:\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak" -o D:\pak\ --brotli "C:\Program Files\brotli.exe"
 Open D:\pak\42900 in Notepad .
-Edit video{object-fit:contain} to video{object-fit:none} then save .
+Edit video{object-fit:contain} to video{object-fit:none!important} then save .
 In Command Prompt :
 python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak"
 
