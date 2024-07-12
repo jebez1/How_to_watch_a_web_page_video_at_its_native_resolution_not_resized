@@ -35,24 +35,24 @@ Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0
 In Command Prompt :
 git clone https://chromium.googlesource.com/chromium/src/tools/grit
 ( the 126.0.6478.126 folder will probably change ( Chrome update ) )
-python some_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" -o extraction_path\ --brotli "C:\Program Files\brotli.exe"
+python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" -o extraction_path\ --brotli "C:\Program Files\brotli.exe"
 Open extraction_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save in Notepad ( 45300 found searching " video { " by Notepad++ ) .
 In Command Prompt :
-python some_path\grit\pak_util.py create -i extraction_path\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
+python a_path\grit\pak_util.py create -i extraction_path\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
 Linux :
 Install git , brotli .
 In Terminal :
 git clone https://chromium.googlesource.com/chromium/src/tools/grit
-some_path/grit/pak_util.py extract /opt/google/chrome/resources.pak -o extraction_path --brotli /usr/bin/brotli
+a_path/grit/pak_util.py extract /opt/google/chrome/resources.pak -o extraction_path --brotli /usr/bin/brotli
 nano -L extraction_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' extraction_path ) .
-some_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak
+a_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak
 
 Nota :
 
 The new resources.pak isn't brotli compressed as the original (
 python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
 pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe 
-root@a:/home/a# /media/a/02bdce52-6e10-446d-9910-66f6d17a15e0/grit/pak_util.py create -i /media/a/02bdce52-6e10-446d-9910-66f6d17a15e0/pak /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
+root@a:/home/a# a_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
 usage: pak_util.py [-h] {repack,extract,create,print,list-id} ...
 pak_util.py: error: unrecognized arguments: --brotli /usr/bin/brotli ) , I wonder how to do that ...
 
