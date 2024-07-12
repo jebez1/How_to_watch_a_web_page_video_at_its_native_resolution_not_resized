@@ -30,21 +30,31 @@ On Firefox :
 with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(formerly_omni.jar) , in chrome\toolkit\res\html.css of C:\Program Files\Mozilla Firefox\omni.ja : edit video{object-fit:contain} to video{object-fit:none!important} .
 
 On Chrome :
+Windows :
 Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0/brotli-x64-windows-static.zip ) then put brotli.exe in e.g. C:\Program Files\ .
 In Command Prompt :
 git clone https://chromium.googlesource.com/chromium/src/tools/grit
-( assuming the grit folder is in e.g. D:\ , the 120.0.6099.225 folder will probably change ( Chrome update ) , assuming extracting in e.g. D:\pak\ )
-python D:\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak" -o D:\pak\ --brotli "C:\Program Files\brotli.exe"
-Open D:\pak\42900 in Notepad .
-Edit video{object-fit:contain} to video{object-fit:none!important} then save .
+( the 126.0.6478.126 folder will probably change ( Chrome update ) )
+python some_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" -o extraction_path\ --brotli "C:\Program Files\brotli.exe"
+Open extraction_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save in Notepad ( 45300 found searching " video { " by Notepad++ ) .
 In Command Prompt :
-python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak"
+python some_path\grit\pak_util.py create -i extraction_path\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
+Linux :
+Install git , brotli .
+In Terminal :
+git clone https://chromium.googlesource.com/chromium/src/tools/grit
+some_path/grit/pak_util.py extract /opt/google/chrome/resources.pak -o extraction_path --brotli /usr/bin/brotli
+nano -L extraction_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' extraction_path ) .
+some_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak
 
 Nota :
 
 The new resources.pak isn't brotli compressed as the original (
-python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\120.0.6099.225\resources.pak" --brotli "C:\Program Files\brotli.exe"
-pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe ) , I wonder how to do that ...
+python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
+pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe 
+root@a:/home/a# /media/a/02bdce52-6e10-446d-9910-66f6d17a15e0/grit/pak_util.py create -i /media/a/02bdce52-6e10-446d-9910-66f6d17a15e0/pak /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
+usage: pak_util.py [-h] {repack,extract,create,print,list-id} ...
+pak_util.py: error: unrecognized arguments: --brotli /usr/bin/brotli ) , I wonder how to do that ...
 
 This method doesn't work for Edge (
 python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak\
