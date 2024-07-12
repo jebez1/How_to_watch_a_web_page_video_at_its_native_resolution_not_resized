@@ -49,7 +49,7 @@ a_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.p
 
 Nota :
 
-The new resources.pak isn't brotli compressed as the original (
+The new resources.pak isn't compressed as the original (
 python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
 pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe 
 root@a:/home/a# a_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
