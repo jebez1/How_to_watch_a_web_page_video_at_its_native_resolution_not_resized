@@ -38,7 +38,7 @@ git clone https://chromium.googlesource.com/chromium/src/tools/grit
 python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" -o extraction_path\ --brotli "C:\Program Files\brotli.exe"
 Open extraction_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save in Notepad ( 45300 found searching " video { " by Notepad++ ) .
 In Command Prompt :
-python a_path\grit\pak_util.py create -i extraction_path\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
+python a_path\grit\pak_util.py create -i extraction_path "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
 Linux :
 Install git , brotli .
 In Terminal :
