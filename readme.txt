@@ -45,7 +45,7 @@ In Terminal :
 git clone https://chromium.googlesource.com/chromium/src/tools/grit a_path
 cd another_path
 a_path/grit/pak_util.py extract /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
-E.g. Text Editor , open another_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' extraction_path ) .
+E.g. Text Editor , open another_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' another_path ) .
 a_path/grit/pak_util.py create /opt/google/chrome/resources.pak
 
 Nota :
