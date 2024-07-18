@@ -33,35 +33,38 @@ On Chrome :
 Windows :
 Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0/brotli-x64-windows-static.zip ) then put brotli.exe in e.g. C:\Program Files\ .
 In Command Prompt :
-git clone https://chromium.googlesource.com/chromium/src/tools/grit
+git clone https://chromium.googlesource.com/chromium/src/tools/grit a_path
 ( the 126.0.6478.126 folder will probably change ( Chrome update ) )
-python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" -o extraction_path\ --brotli "C:\Program Files\brotli.exe"
-Open extraction_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save in Notepad ( 45300 found searching " video { " by Notepad++ ) .
-In Command Prompt :
-python a_path\grit\pak_util.py create -i extraction_path "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
+cd another_path
+python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
+E.g. Notepad , open another_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found searching " video { " by Notepad++ ) .
+python a_path\grit\pak_util.py create "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
 Linux :
 Install git , brotli .
 In Terminal :
-git clone https://chromium.googlesource.com/chromium/src/tools/grit
-a_path/grit/pak_util.py extract /opt/google/chrome/resources.pak -o extraction_path --brotli /usr/bin/brotli
-nano -L extraction_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' extraction_path ) .
-a_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak
+git clone https://chromium.googlesource.com/chromium/src/tools/grit a_path
+cd another_path
+a_path/grit/pak_util.py extract /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
+E.g. Text Editor , open another_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' extraction_path ) .
+a_path/grit/pak_util.py create /opt/google/chrome/resources.pak
 
 Nota :
 
 The new resources.pak isn't compressed as the original (
-python D:\grit\pak_util.py create -i D:\pak "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
+Windows :
+python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
 pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe 
-root@a:/home/a# a_path/grit/pak_util.py create -i extraction_path /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
+Linux :
+a_path/grit/pak_util.py create /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
 usage: pak_util.py [-h] {repack,extract,create,print,list-id} ...
 pak_util.py: error: unrecognized arguments: --brotli /usr/bin/brotli ) , I wonder how to do that ...
 
 This method doesn't work for Edge (
-python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak\
+python a_path\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak"
 'brotli' is not recognized as an internal or external command,
 operable program or batch file.
 Command '['brotli', '--decompress', '--stdout']' returned non-zero exit status 1.
-python D:\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" -o D:\pak\ --brotli "C:\Program Files\brotli.exe"
+python a_path\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" --brotli "C:\Program Files\brotli.exe"
 corrupt input [con]
 Command '['C:\\Program Files\\brotli.exe', '--decompress', '--stdout']' returned non-zero exit status 1. ) .
 
