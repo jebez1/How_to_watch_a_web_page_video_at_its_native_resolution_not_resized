@@ -27,22 +27,24 @@ Generally , by video{object-fit:none!important} , overriding all other web page 
 User agent stylesheet :
 
 On Firefox :
-with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(formerly_omni.jar) , in chrome\toolkit\res\html.css of C:\Program Files\Mozilla Firefox\omni.ja : edit video{object-fit:contain} to video{object-fit:none!important} .
+with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(formerly_omni.jar) , in chrome/toolkit/res/html.css of omni.ja : edit video{object-fit:contain} to video{object-fit:none!important} .
 
 On Chrome :
 Windows :
 Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0/brotli-x64-windows-static.zip ) then put brotli.exe in e.g. C:\Program Files\ .
 In Command Prompt :
-git clone https://chromium.googlesource.com/chromium/src/tools/grit a_path
-( the 126.0.6478.126 folder will probably change ( Chrome update ) )
+cd a_path
+git clone https://chromium.googlesource.com/chromium/src/tools/grit
+( the 126.0.6478.128 folder will probably change ( Chrome update ) )
 cd another_path
-python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
+python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak" --brotli "C:\Program Files\brotli.exe"
 E.g. Notepad , open another_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found searching " video { " by Notepad++ ) .
-python a_path\grit\pak_util.py create "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak"
+python a_path\grit\pak_util.py create "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak"
 Linux :
 Install git , brotli .
 In Terminal :
-git clone https://chromium.googlesource.com/chromium/src/tools/grit a_path
+cd a_path
+git clone https://chromium.googlesource.com/chromium/src/tools/grit
 cd another_path
 a_path/grit/pak_util.py extract /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
 E.g. Text Editor , open another_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' another_path ) .
@@ -52,7 +54,7 @@ Nota :
 
 The new resources.pak isn't compressed as the original (
 Windows :
-python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.126\resources.pak" --brotli "C:\Program Files\brotli.exe"
+python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak" --brotli "C:\Program Files\brotli.exe"
 pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe 
 Linux :
 a_path/grit/pak_util.py create /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
