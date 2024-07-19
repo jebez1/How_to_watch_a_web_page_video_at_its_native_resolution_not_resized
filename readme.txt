@@ -35,8 +35,8 @@ Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0
 In Command Prompt :
 cd a_path
 git clone https://chromium.googlesource.com/chromium/src/tools/grit
-( the 126.0.6478.128 folder will probably change ( Chrome update ) )
 cd another_path
+( the 126.0.6478.128 folder will probably change ( Chrome update ) )
 python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak" --brotli "C:\Program Files\brotli.exe"
 E.g. Notepad , open another_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found searching " video { " by Notepad++ ) .
 python a_path\grit\pak_util.py create "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak"
