@@ -1,6 +1,6 @@
 Why is <video> on a web page ( e.g. Youtube ) resized ?
 
-<video> has a container ( like width=100% ) & by default it's video{object-fit:contain} of the user agent stylesheet of Edge , Chrome , Firefox .
+<video> has a container ( like width=100% ) & by default it's video{object-fit:contain} of the user agent stylesheet of Edge , Chrome , Firefox , Falkon .
 If no width , no height the default is width:auto & height:auto . 
 If no video|img{object-fit: ... } , the default is video|img{object-fit:fill} . 
 
@@ -80,6 +80,9 @@ follow https://www.thoughtco.com/user-style-sheet-3469931 , in userContent.css p
 On Edge , Chrome :
 it's impossible without extension : https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update .
 But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : video no-fit ) .
+
+On Falkon :
+Preferences , Other , User Style Sheet , select a .css file with video{object-fit:none!important} in it .
 
 It works on Youtube , Facebook , Vimeo , Koreus , Twitter , Dailymotion ...
 
