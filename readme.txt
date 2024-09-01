@@ -82,7 +82,7 @@ it's impossible without extension : https://stackoverflow.com/questions/21207474
 But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : video no-fit ) .
 
 On Falkon :
-Preferences , Other , User Style Sheet , select a .css file with video{object-fit:none!important} in it .
+Preferences , Other , User Style Sheet , select a .css file with video{object-fit:none!important} .
 
 It works on Youtube , Facebook , Vimeo , Koreus , Twitter , Dailymotion ...
 
