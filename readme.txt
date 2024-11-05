@@ -1,6 +1,6 @@
 Why is <video> on a web page ( e.g. Youtube ) resized ?
 
-<video> has a container ( like width=100% ) & by default it's video{object-fit:contain} of the user agent stylesheet of Edge , Chrome , Firefox , Falkon .
+<video> has a container ( like width=100% ) & by default it's video{object-fit:contain} of the user agent stylesheet of Chrome , Firefox , Falkon .
 If no width , no height the default is width:auto & height:auto . 
 If no video|img{object-fit: ... } , the default is video|img{object-fit:fill} . 
 
@@ -29,18 +29,7 @@ User agent stylesheet :
 On Firefox :
 with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(formerly_omni.jar) , in chrome/toolkit/res/html.css of omni.ja : edit video{object-fit:contain} to video{object-fit:none!important} .
 
-On Chrome :
-Windows :
-Download brotli ( e.g. https://github.com/google/brotli/releases/download/v1.1.0/brotli-x64-windows-static.zip ) then put brotli.exe in e.g. C:\Program Files\ .
-In Command Prompt :
-cd a_path
-git clone https://chromium.googlesource.com/chromium/src/tools/grit
-cd another_path
-( the 126.0.6478.128 folder will probably change ( Chrome update ) )
-python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak" --brotli "C:\Program Files\brotli.exe"
-E.g. Notepad , open another_path\45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found searching " video { " by Notepad++ ) .
-python a_path\grit\pak_util.py create "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak"
-Linux :
+On Chrome , Linux :
 Install git , brotli .
 In Terminal :
 cd a_path
@@ -52,23 +41,11 @@ a_path/grit/pak_util.py create /opt/google/chrome/resources.pak
 
 Nota :
 
-The new resources.pak isn't compressed as the original (
-Windows :
-python a_path\grit\pak_util.py extract "C:\Program Files\Google\Chrome\Application\126.0.6478.128\resources.pak" --brotli "C:\Program Files\brotli.exe"
-pak_util.py: error: unrecognized arguments: --brotli C:\Program Files\brotli.exe 
-Linux :
+The new resources.pak isn't compressed as the original :
 a_path/grit/pak_util.py create /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
 usage: pak_util.py [-h] {repack,extract,create,print,list-id} ...
-pak_util.py: error: unrecognized arguments: --brotli /usr/bin/brotli ) , I wonder how to do that ...
-
-This method doesn't work for Edge (
-python a_path\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak"
-'brotli' is not recognized as an internal or external command,
-operable program or batch file.
-Command '['brotli', '--decompress', '--stdout']' returned non-zero exit status 1.
-python a_path\grit\pak_util.py extract "C:\Program Files (x86)\Microsoft\Edge\Application\121.0.2277.71\resources.pak" --brotli "C:\Program Files\brotli.exe"
-corrupt input [con]
-Command '['C:\\Program Files\\brotli.exe', '--decompress', '--stdout']' returned non-zero exit status 1. ) .
+pak_util.py: error: unrecognized arguments: --brotli /usr/bin/brotli
+I wonder how to do that ...
 
 There's also https://github.com/myfreeer/chrome-pak-customizer but at the time I write ; the last release 2.0 & the 3.x branch ( to compile ) don't work ...
 
@@ -77,7 +54,7 @@ User stylesheet :
 On Firefox :
 follow https://www.thoughtco.com/user-style-sheet-3469931 , in userContent.css put video{object-fit:none!important} .
 
-On Edge , Chrome :
+On Chrome :
 it's impossible without extension : https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update .
 But yes with an extension that injects a user stylesheet ( .css file ) with video{object-fit:none!important} in it ( only video{object-fit:none!important} : video no-fit ) .
 
@@ -123,7 +100,6 @@ https://www.w3schools.com/cssref/pr_dim_width.php
 https://www.w3schools.com/css/css_important.asp
 https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade
 https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
-https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/device-mode/override-user-agent
 https://developer.chrome.com/docs/extensions/mv3/manifest/
 https://developer.chrome.com/docs/extensions/mv3/manifest/content_scripts/
 
@@ -131,6 +107,4 @@ Download video no-fit :
 https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjebez1%2FHow_to_watch_web_page_video_at_its_native_resolution_not_resized%2Ftree%2Fmain%2Fvideo%2520no-fit
 
 How to install an extension :
-https://learn.microsoft.com/en-us/microsoft-edge/extensions-chromium/getting-started/extension-sideloading
-
-Feel free to publish video no-fit .
+https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked
