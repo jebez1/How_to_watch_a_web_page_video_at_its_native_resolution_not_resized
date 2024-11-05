@@ -31,12 +31,12 @@ with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(forme
 
 On Chrome , Linux :
 Install git , brotli .
-In Terminal :
+In Konsole :
 cd a_path
 git clone https://chromium.googlesource.com/chromium/src/tools/grit
 cd another_path
 a_path/grit/pak_util.py extract /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
-E.g. Text Editor , open another_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' ) .
+E.g. Kate , open another_path/45300 , edit video{object-fit:contain} to video{object-fit:none!important} then save ( 45300 found by grep -r 'video {' ) .
 a_path/grit/pak_util.py create /opt/google/chrome/resources.pak
 
 Nota :
