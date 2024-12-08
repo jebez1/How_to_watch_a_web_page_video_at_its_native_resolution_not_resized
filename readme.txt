@@ -74,7 +74,6 @@ As above...
 If possible, right click on the video then Open video in new tab, or Save video as then play it on the web browser. I've never seen this on Youtube, we can assume that Google doesn't want it to be possible to download the video except with Premium, paying after the free trial...
 If impossible, get the URL of the video or download it (with yt-dlp) then play it on the web browser.
 
-
 How to VLC ?
 If possible, right click on the video then Copy link, or Save video as then VLC.
 As above, if impossible, get the URL of the video or download it (with yt-dlp) then play it on VLC.
