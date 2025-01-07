@@ -97,3 +97,6 @@ https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjebez1%2FHo
 
 How to install an extension:
 https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked
+
+video no-fit on chrome web store:
+https://chromewebstore.google.com/detail/video-no-fit/jpacddkbicjapaflpjakcljhejcpakjc
