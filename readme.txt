@@ -84,6 +84,9 @@ On web browser, <video> without container vs object-fit:none <video>:
 
 E.g. on Youtube: the video without container is on the top corner left of the player, centered with object-fit:none.
 
+video no-fit Chrome extension:
+https://chromewebstore.google.com/detail/video-no-fit/jpacddkbicjapaflpjakcljhejcpakjc
+
 https://www.w3schools.com/css/css3_object-fit.asp
 https://www.w3schools.com/cssref/pr_dim_width.php
 https://www.w3schools.com/css/css_important.asp
@@ -91,6 +94,3 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade
 https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
 https://developer.chrome.com/docs/extensions/mv3/manifest/
 https://developer.chrome.com/docs/extensions/mv3/manifest/content_scripts/
-
-video no-fit on chrome web store:
-https://chromewebstore.google.com/detail/video-no-fit/jpacddkbicjapaflpjakcljhejcpakjc
