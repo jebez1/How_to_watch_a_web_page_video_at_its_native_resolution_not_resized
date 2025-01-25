@@ -24,13 +24,15 @@ with the help of https://udn.realityripple.com/docs/Mozilla/About_omni.ja_(forme
 
 On Linux Chrome:
 Install git, brotli.
-In Konsole:
-cd $a_path$;git clone https://chromium.googlesource.com/chromium/src/tools/grit;cd $another_path$;$a_path$/grit/pak_util.py extract /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
-E.g. Kate, open $another_path$/45300, edit video{object-fit:contain} to video{object-fit:none!important} then save (45300 found by grep -r 'video {').
+CLI:
+cd $a_path$
+git clone https://chromium.googlesource.com/chromium/src/tools/grit
+cd $another_path$
+$a_path$/grit/pak_util.py extract /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
+Text editor: open $another_path$/45300, edit video{object-fit:contain} to video{object-fit:none!important} then save (45300 found by grep -r 'video {').
 $a_path$/grit/pak_util.py create /opt/google/chrome/resources.pak
 
 Notes:
-
 The new resources.pak isn't compressed as the original:
 $a_path$/grit/pak_util.py create /opt/google/chrome/resources.pak --brotli /usr/bin/brotli
 usage: pak_util.py [-h] {repack,extract,create,print,list-id}...
@@ -59,7 +61,9 @@ Modify the web browser source code to change the default video{object-fit:fill} 
 
 How to auto get the video without container?
 
-By video{width:auto!important;height:auto!important}.
+By
+video{width:auto!important
+height:auto!important}
 
 As above...
 
@@ -67,7 +71,9 @@ Remove like width=100% from <video> with an extension...
 
 How to auto get <video> with the container using max-width:100% & max-height:100%?
 
-By video{max-width:100%!important;max-height:100%!important}.
+By
+video{max-width:100%!important
+max-height:100%!important}
 
 As above...
 
@@ -81,7 +87,6 @@ https://code.videolan.org/videolan/vlc/-/issues/26174
 https://stackoverflow.com/questions/76988482/play-youtube-in-vlc-with-yt-dlp-exe-no-ads-context-menu-in-firefox
 
 On web browser, <video> without container vs object-fit:none <video>:
-
 E.g. on Youtube: the video without container is on the top corner left of the player, centered with object-fit:none.
 
 video no-fit Chrome extension:
