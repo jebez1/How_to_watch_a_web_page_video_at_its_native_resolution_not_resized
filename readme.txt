@@ -1,6 +1,6 @@
 Why is <video> on a web page (e.g. Youtube) resized?
 
-<video> has a container (like width=100%) & by default it's video{object-fit:contain} of the user agent stylesheet of Chrome, Firefox,Falkon.
+<video> has a container (like width=100%) & by default it's video{object-fit:contain} of the user agent stylesheet of Chrome, Firefox, Falkon.
 If no width, no height in the web page, the default is width:auto & height:auto. 
 If video{object-fit:contain} is removed from the user agent stylesheet & no video{object-fit:...} in the web page, the default is video{object-fit:fill}. 
 
@@ -46,7 +46,7 @@ follow https://www.thoughtco.com/user-style-sheet-3469931, in userContent.css pu
 
 On Chrome:
 it's impossible without extension: https://stackoverflow.com/questions/21207474/custom-css-has-stopped-working-in-32-0-1700-76-m-google-chrome-update.
-But yes with an extension that injects a user stylesheet (.css file) with video{object-fit:none!important} insidet (only video{object-fit:none!important}: video no-fit).
+But yes with an extension that injects a user stylesheet (.css file) with video{object-fit:none!important} inside.
 
 On Falkon:
 Preferences, Other, User Style Sheet, select a .css file with video{object-fit:none!important}.
@@ -91,12 +91,6 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade
 https://chromium.googlesource.com/chromium/blink/+/master/Source/core/css/html.css
 https://developer.chrome.com/docs/extensions/mv3/manifest/
 https://developer.chrome.com/docs/extensions/mv3/manifest/content_scripts/
-
-Download video no-fit:
-https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fjebez1%2FHow_to_watch_web_page_video_at_its_native_resolution_not_resized%2Ftree%2Fmain%2Fvideo%2520no-fit
-
-How to install an extension:
-https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked
 
 video no-fit on chrome web store:
 https://chromewebstore.google.com/detail/video-no-fit/jpacddkbicjapaflpjakcljhejcpakjc
